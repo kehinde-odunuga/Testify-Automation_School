@@ -1,6 +1,4 @@
 
-print("Hi Testar Kehinde")
-
-print("What's up?")
+print("Hello World")
 
 # extra line
