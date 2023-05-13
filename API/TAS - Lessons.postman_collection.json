@@ -1,0 +1,460 @@
+{
+	"info": {
+		"_postman_id": "01a5400f-afb6-43d6-8931-3b93ff1b5e5c",
+		"name": "TAS - Lessons",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11355708"
+	},
+	"item": [
+		{
+			"name": "Google search",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status code is OK\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+							"});\r",
+							"pm.test(\"Response Body contains Kehinde Odunuga\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"kehinde odunuga\");\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Transfer-Encoding\");\r",
+							"});\r",
+							"console.log();"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.google.com/search?q=kehinde odunuga",
+					"protocol": "https",
+					"host": [
+						"www",
+						"google",
+						"com"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "kehinde odunuga"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Increment Parameters",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Increment random value by +, -, *, /, %\r",
+							"\r",
+							"let localVal = pm.globals.get(\"userId\")\r",
+							"\r",
+							"pm.globals.set(\"userId\", localVal+2);\r",
+							"\r",
+							"//console.log(localVal)\r",
+							"\r",
+							"\r",
+							"// Random phoneNumber for Test\r",
+							"var eightDigit = Math.floor(Math.random() * 100000000);\r",
+							"phoneNumber = '070' + eightDigit\r",
+							"console.log(phoneNumber)\r",
+							"\r",
+							"\r",
+							"// Generate OTP code\r",
+							"var sixDigit = Math.floor(Math.random() * 1000000);\r",
+							"console.log(sixDigit)\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"\r",
+							"// Random notes for Test\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://postman-echo.com/get?value={{userId}}",
+					"protocol": "https",
+					"host": [
+						"postman-echo",
+						"com"
+					],
+					"path": [
+						"get"
+					],
+					"query": [
+						{
+							"key": "value",
+							"value": "{{userId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Re-use Variables",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"//Test to confirm name is Kehinde\r",
+							"pm.test(\"Confirm name is \" + jsonData.data.name + \"\" , function () {\r",
+							"    pm.expect(jsonData.data.name).to.eql(jsonData.data.name);\r",
+							"});\r",
+							"pm.environment.set(\"username\", jsonData.data.name);\r",
+							"\r",
+							"//Headers response\r",
+							"var headersResponse = pm.response.headers.all();\r",
+							"console.log(headersResponse[3].value)\r",
+							"\r",
+							"pm.environment.set(\"headerDateValue\", headersResponse[0].value);\r",
+							"\r",
+							"//Cookies response\r",
+							"var cookiesResponse = pm.cookies.get('sails.sid');\r",
+							"console.log(cookiesResponse)\r",
+							"\r",
+							"pm.collectionVariables.set(\"cookiesResponse\", cookiesResponse);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"{{userid}}\",\r\n    \"name\": \"Taiwo\",\r\n    \"location\": \"Nigeria\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://postman-echo.com/post?id={{userid}}",
+					"protocol": "https",
+					"host": [
+						"postman-echo",
+						"com"
+					],
+					"path": [
+						"post"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{userid}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hide Sensitive Info",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{Api-Key}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x-api-key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://postman-echo.com/get",
+					"protocol": "https",
+					"host": [
+						"postman-echo",
+						"com"
+					],
+					"path": [
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Use variables from files",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"{{name}}\",\r\n    \"location\": \"{{location}}\",\r\n    \"username\": \"{{username}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://postman-echo.com/get?value={{userId}}",
+					"protocol": "https",
+					"host": [
+						"postman-echo",
+						"com"
+					],
+					"path": [
+						"get"
+					],
+					"query": [
+						{
+							"key": "value",
+							"value": "{{userId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lists",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"console.log(jsonData[7].id)\r",
+							"\r",
+							"pm.test(\"Confirm Id of item 8 is \" + jsonData[7].id + \"\" , function () {\r",
+							"    pm.expect(jsonData[7].id).to.eql(8);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Array",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"console.log(jsonData.data[999])\r",
+							"\r",
+							"pm.test(\"Confirm name 1000 is \" + jsonData.data[999] + \"\" , function () {\r",
+							"    pm.expect(\"Yurem\").to.eql(jsonData.data[999]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://randomlists.com/data/names-male.json",
+					"protocol": "https",
+					"host": [
+						"randomlists",
+						"com"
+					],
+					"path": [
+						"data",
+						"names-male.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "XML",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonObject = xml2Json(responseBody);\r",
+							"\r",
+							"//console.log(jsonObject.TravelerinformationResponse.travelers.Travelerinformation[1])\r",
+							"\r",
+							"let travelers = jsonObject.TravelerinformationResponse.travelers.Travelerinformation\r",
+							"\r",
+							"pm.test(\"Confirm Karen's email address is \" + travelers[9].email + \"\", function () {\r",
+							"    pm.expect(\"karen@mail.ru\").to.eql(travelers[9].email);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://restapi.adequateshop.com/api/Traveler?page=1",
+					"protocol": "http",
+					"host": [
+						"restapi",
+						"adequateshop",
+						"com"
+					],
+					"path": [
+						"api",
+						"Traveler"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "MNurl",
+			"value": "123"
+		},
+		{
+			"key": "cookiesResponse",
+			"value": ""
+		}
+	]
+}
