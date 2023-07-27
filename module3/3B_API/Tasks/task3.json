@@ -7,6 +7,135 @@
 	},
 	"item": [
 		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Status",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is an object with status property\", function () {\r",
+									"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('status');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status property is a string\", function () {\r",
+									"    pm.expect(pm.response.json().status).to.be.a('string');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status property is not empty\", function () {\r",
+									"    pm.expect(pm.response.json().status).to.not.be.empty;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/status",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API Authentication",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"/**\r",
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"pm.environment.set(\"accessToken\", jsonData.accessToken);\r",
+									"postman.setNextRequest(\"Get all books\")\r",
+									"*/\r",
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 201 Created\", function () {\r",
+									"    pm.expect(pm.response.code).to.equal(201);\r",
+									"});\r",
+									"\r",
+									"var responseData = pm.response.json();\r",
+									"pm.test(\"Response has the field - accessToken\", function () {\r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.accessToken).to.exist;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Access token is not empty\", function () {\r",
+									"    pm.expect(responseData.accessToken).to.exist.and.to.not.be.empty;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"The accessToken is a valid format\", function () {\r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.accessToken).to.match(/^[a-zA-Z0-9]+$/, \"accessToken should be alphanumeric\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify that the accessToken is saved in the environment variable\", function () {\r",
+									"    pm.expect(responseData.accessToken).to.exist.and.to.be.a('string');\r",
+									"\r",
+									"    pm.environment.set(\"accessToken\", responseData.accessToken);\r",
+									"});\r",
+									"\r",
+									"// run \"Get all books\" as next request\r",
+									"postman.setNextRequest(\"Get all books\")\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"clientName\": \"Kehinde\",\r\n   \"clientEmail\": \"{{$randomEmail}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api-clients/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api-clients",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Get All Todo Entries",
 			"item": [
 				{
@@ -33,19 +162,12 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{host}}/todo",
+							"raw": "https://demo.fusio-project.org",
+							"protocol": "https",
 							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"todo"
-							],
-							"query": [
-								{
-									"key": "",
-									"value": "",
-									"disabled": true
-								}
+								"demo",
+								"fusio-project",
+								"org"
 							]
 						}
 					},
@@ -73,19 +195,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/index.php",
+							"raw": "https://demo.fusio-project.org/index.php",
+							"protocol": "https",
 							"host": [
-								"{{host}}"
+								"demo",
+								"fusio-project",
+								"org"
 							],
 							"path": [
 								"index.php"
-							],
-							"query": [
-								{
-									"key": "",
-									"value": "",
-									"disabled": true
-								}
 							]
 						},
 						"description": "https://demo.fusio-project.org/index.php/"
@@ -99,6 +217,17 @@
 			"item": [
 				{
 					"name": "Get entry per ID - Valid ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -110,19 +239,15 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{host}}/index.php",
+							"raw": "https://demo.fusio-project.org/index.php",
+							"protocol": "https",
 							"host": [
-								"{{host}}"
+								"demo",
+								"fusio-project",
+								"org"
 							],
 							"path": [
 								"index.php"
-							],
-							"query": [
-								{
-									"key": "",
-									"value": "",
-									"disabled": true
-								}
 							]
 						},
 						"description": "https://demo.fusio-project.org/index.php/todo/:todo_id"
@@ -131,23 +256,30 @@
 				},
 				{
 					"name": "Get entry per ID - Invalid ID(params not using TODO ID)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/index.php",
+							"raw": "https://demo.fusio-project.org/index.php",
+							"protocol": "https",
 							"host": [
-								"{{host}}"
+								"demo",
+								"fusio-project",
+								"org"
 							],
 							"path": [
 								"index.php"
-							],
-							"query": [
-								{
-									"key": "",
-									"value": "",
-									"disabled": true
-								}
 							]
 						},
 						"description": "https://demo.fusio-project.org/index.php/todo/:todo_id"
@@ -166,15 +298,27 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {\r",
+									"pm.test(\"Status code is 200 OK\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
 									"\r",
-									"//Verify the Id number of non-fiction book named \"Untamed\"\r",
-									"var jsonData = pm.response.json();\r",
+									"var response = pm.response.json();\r",
 									"\r",
-									"pm.test(\"Verify Id number of the book Untamed is correct\", function () {\r",
-									"    pm.expect(jsonData[1].id).to.eql(5);\r",
+									"pm.test(\"Response body is an array of objects\", function () {\r",
+									"    pm.expect(response).to.be.an('array');\r",
+									"\r",
+									"    response.forEach(function (item) {\r",
+									"        pm.expect(item).to.be.an('object');\r",
+									"    });\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Each book object has the required properties\", function () {\r",
+									"    response.forEach(function (book) {\r",
+									"        pm.expect(book).to.have.property('id');\r",
+									"        pm.expect(book).to.have.property('name');\r",
+									"        pm.expect(book).to.have.property('type');\r",
+									"        pm.expect(book).to.have.property('available');\r",
+									"    });\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -182,31 +326,18 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/books?type=non-fiction",
+							"raw": "{{baseUrl}}/books",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"books"
-							],
-							"query": [
-								{
-									"key": "type",
-									"value": "fiction",
-									"disabled": true
-								},
-								{
-									"key": "type",
-									"value": "non-fiction"
-								},
-								{
-									"key": "limit",
-									"value": "2",
-									"disabled": true
-								}
 							]
 						}
 					},
@@ -219,15 +350,52 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {\r",
+									"pm.test(\"Response status code is 200 OK\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
-									"});"
+									"});\r",
+									"\r",
+									"var responseData = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Item has the required properties\", function () {\r",
+									"    pm.expect(responseData).to.have.property('id');\r",
+									"    pm.expect(responseData).to.have.property('name');\r",
+									"    pm.expect(responseData).to.have.property('author');\r",
+									"    pm.expect(responseData).to.have.property('type');\r",
+									"    pm.expect(responseData).to.have.property('price');\r",
+									"    pm.expect(responseData).to.have.property('current-stock');\r",
+									"    pm.expect(responseData).to.have.property('available');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"id is positive integer\", function () {\r",
+									"    pm.expect(responseData.id).to.be.a('number');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Book availabilty is either True of False\", function () {\r",
+									"    pm.expect(responseData.available).to.be.a('boolean');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Name is a string\", function () {\r",
+									"    pm.expect(responseData.name).to.be.a('string');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Author is a string\", function () {\r",
+									"    pm.expect(responseData.author).to.be.a('string');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Type is a string\", function () {\r",
+									"    pm.expect(responseData.type).to.be.a('string');\r",
+									"});\r",
+									"\r",
+									""
 								],
 								"type": "text/javascript"
 							}
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -248,6 +416,83 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Get a non-fictional book - Untamed (task3)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response status code is 200 OK\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var responseData = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Item has the required properties\", function () {\r",
+									"    pm.expect(responseData).to.have.property('id');\r",
+									"    pm.expect(responseData).to.have.property('name');\r",
+									"    pm.expect(responseData).to.have.property('author');\r",
+									"    pm.expect(responseData).to.have.property('type');\r",
+									"    pm.expect(responseData).to.have.property('price');\r",
+									"    pm.expect(responseData).to.have.property('current-stock');\r",
+									"    pm.expect(responseData).to.have.property('available');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"id is positive integer\", function () {\r",
+									"    pm.expect(responseData.id).to.be.a('number');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Book availabilty is either True of False\", function () {\r",
+									"    pm.expect(responseData.available).to.be.a('boolean');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Name is a string\", function () {\r",
+									"    pm.expect(responseData.name).to.be.a('string');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Author is a string\", function () {\r",
+									"    pm.expect(responseData.author).to.be.a('string');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Type is a string\", function () {\r",
+									"    pm.expect(responseData.type).to.be.a('string');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify Id number of the non-fictional book Untamed is \"  + responseData.id + \"\", function () {\r",
+									"    pm.expect(responseData.id).to.eql(5);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/books/:bookId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"books",
+								":bookId"
+							],
+							"variable": [
+								{
+									"key": "bookId",
+									"value": "{{book_untamed}}"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -261,13 +506,27 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"var jsonData = pm.response.json();\r",
-									"\r",
 									"pm.test(\"Status code is 201\", function () {\r",
 									"    pm.response.to.have.status(201);\r",
 									"});\r",
 									"\r",
-									"pm.collectionVariables.set(\"orderId\", jsonData.orderId);"
+									"var response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Response has the required fields\", function () {\r",
+									"    pm.expect(response).to.be.an('object');\r",
+									"    pm.expect(response.created).to.exist;\r",
+									"    pm.expect(response.orderId).to.exist;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Created status is true\", function () {\r",
+									"    pm.expect(response.created).to.eql(true);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"orderId is a non-empty string\", function () {\r",
+									"    pm.expect(response.orderId).to.exist.and.to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");\r",
+									"});\r",
+									"\r",
+									"pm.collectionVariables.set(\"orderId\", response.orderId);"
 								],
 								"type": "text/javascript"
 							}
@@ -288,7 +547,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"bookId\": 1,\r\n  \"customerName\": \"Ryan\"\r\n}",
+							"raw": "{\r\n  \"bookId\": 3,\r\n  \"customerName\": \"Kehinde Odunuga\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -323,9 +582,7 @@
 								"exec": [
 									"pm.test(\"Status code is 204 - No content\", function () {\r",
 									"    pm.response.to.have.status(204);\r",
-									"});\r",
-									"\r",
-									""
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -346,7 +603,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"customerName\": \"John Wick\"\r\n}",
+							"raw": "{\r\n  \"customerName\": \"Kehinde Books\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -508,66 +765,6 @@
 									"key": "orderId",
 									"value": "{{orderId}}"
 								}
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Authentication",
-			"item": [
-				{
-					"name": "Status",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{baseUrl}}/status",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"status"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "API Authentication",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.collectionVariables.set(\"token\", accessToken);"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n   \"clientName\": \"Kehinde\",\r\n   \"clientEmail\": \"kehinde0@example.com\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/api-clients/",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"api-clients",
-								""
 							]
 						}
 					},
