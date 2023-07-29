@@ -1,0 +1,610 @@
+{
+	"id": "7f13c0b2-ed1a-4195-bae2-46a4d595bb2f",
+	"name": "APICollection",
+	"timestamp": "2023-07-29T11:35:23.630Z",
+	"collection_id": "11355708-c73b107c-9c51-4dbe-a109-ddb48545ecf5",
+	"folder_id": 0,
+	"environment_id": "11355708-3cdbbbbe-6cad-4d1d-8c11-05e0919b049d",
+	"totalPass": 80,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-07-29T11:35:12.415Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "70a460f1-e943-46e2-9ef5-5d12cbfaf343",
+			"name": "Status",
+			"url": "https://simple-books-api.glitch.me/status",
+			"time": 260,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is an object with status property": true,
+				"Status property is a string": true,
+				"Status property is not empty": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Response is an object with status property": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Status property is a string": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Status property is not empty": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				1381,
+				260
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is an object with status property": true,
+					"Status property is a string": true,
+					"Status property is not empty": true
+				},
+				{
+					"Status code is 200": true,
+					"Response is an object with status property": true,
+					"Status property is a string": true,
+					"Status property is not empty": true
+				}
+			]
+		},
+		{
+			"id": "1fcdd12d-2879-4469-be53-3a5429a997f8",
+			"name": "API Authentication",
+			"url": "https://simple-books-api.glitch.me/api-clients/",
+			"time": 322,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201 Created": true,
+				"Response has the field - accessToken": true,
+				"Access token is not empty": true,
+				"The accessToken is a valid format": true,
+				"Verify that the accessToken is saved in the environment variable": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201 Created": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Response has the field - accessToken": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Access token is not empty": {
+					"pass": 2,
+					"fail": 0
+				},
+				"The accessToken is a valid format": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Verify that the accessToken is saved in the environment variable": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				438,
+				322
+			],
+			"allTests": [
+				{
+					"Status code is 201 Created": true,
+					"Response has the field - accessToken": true,
+					"Access token is not empty": true,
+					"The accessToken is a valid format": true,
+					"Verify that the accessToken is saved in the environment variable": true
+				},
+				{
+					"Status code is 201 Created": true,
+					"Response has the field - accessToken": true,
+					"Access token is not empty": true,
+					"The accessToken is a valid format": true,
+					"Verify that the accessToken is saved in the environment variable": true
+				}
+			]
+		},
+		{
+			"id": "b90d69be-c5ed-4c85-bf9a-3c2e0c64661b",
+			"name": "Get all books",
+			"url": "https://simple-books-api.glitch.me/books",
+			"time": 450,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 OK": true,
+				"Response body is an array of objects": true,
+				"Each book object has the required properties": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 OK": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Response body is an array of objects": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Each book object has the required properties": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				282,
+				450
+			],
+			"allTests": [
+				{
+					"Status code is 200 OK": true,
+					"Response body is an array of objects": true,
+					"Each book object has the required properties": true
+				},
+				{
+					"Status code is 200 OK": true,
+					"Response body is an array of objects": true,
+					"Each book object has the required properties": true
+				}
+			]
+		},
+		{
+			"id": "d444466d-30b1-4d9e-b5c6-236c79c2a769",
+			"name": "Get a single book",
+			"url": "https://simple-books-api.glitch.me/books/4",
+			"time": 314,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200 OK": true,
+				"Item has the required properties": true,
+				"id is positive integer": true,
+				"Book availabilty is either True of False": true,
+				"Name is a string": true,
+				"Author is a string": true,
+				"Type is a string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200 OK": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Item has the required properties": {
+					"pass": 2,
+					"fail": 0
+				},
+				"id is positive integer": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Book availabilty is either True of False": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Name is a string": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Author is a string": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Type is a string": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				281,
+				314
+			],
+			"allTests": [
+				{
+					"Response status code is 200 OK": true,
+					"Item has the required properties": true,
+					"id is positive integer": true,
+					"Book availabilty is either True of False": true,
+					"Name is a string": true,
+					"Author is a string": true,
+					"Type is a string": true
+				},
+				{
+					"Response status code is 200 OK": true,
+					"Item has the required properties": true,
+					"id is positive integer": true,
+					"Book availabilty is either True of False": true,
+					"Name is a string": true,
+					"Author is a string": true,
+					"Type is a string": true
+				}
+			]
+		},
+		{
+			"id": "f76c2596-92d5-417a-87c2-cb31dddd0dea",
+			"name": "Get a non-fictional book - Untamed (task3)",
+			"url": "https://simple-books-api.glitch.me/books/5",
+			"time": 317,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200 OK": true,
+				"Item has the required properties": true,
+				"id is positive integer": true,
+				"Book availabilty is either True of False": true,
+				"Name is a string": true,
+				"Author is a string": true,
+				"Type is a string": true,
+				"Verify Id number of the non-fictional book Untamed is 5": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200 OK": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Item has the required properties": {
+					"pass": 2,
+					"fail": 0
+				},
+				"id is positive integer": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Book availabilty is either True of False": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Name is a string": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Author is a string": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Type is a string": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Verify Id number of the non-fictional book Untamed is 5": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				280,
+				317
+			],
+			"allTests": [
+				{
+					"Response status code is 200 OK": true,
+					"Item has the required properties": true,
+					"id is positive integer": true,
+					"Book availabilty is either True of False": true,
+					"Name is a string": true,
+					"Author is a string": true,
+					"Type is a string": true,
+					"Verify Id number of the non-fictional book Untamed is 5": true
+				},
+				{
+					"Response status code is 200 OK": true,
+					"Item has the required properties": true,
+					"id is positive integer": true,
+					"Book availabilty is either True of False": true,
+					"Name is a string": true,
+					"Author is a string": true,
+					"Type is a string": true,
+					"Verify Id number of the non-fictional book Untamed is 5": true
+				}
+			]
+		},
+		{
+			"id": "357b011d-1ec1-4e11-b991-c16d9d3c7b4c",
+			"name": "task4 - extract the Russian book id",
+			"url": "https://simple-books-api.glitch.me/books",
+			"time": 281,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 OK": true,
+				"Your test name": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 OK": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Your test name": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				250,
+				281
+			],
+			"allTests": [
+				{
+					"Status code is 200 OK": true,
+					"Your test name": true
+				},
+				{
+					"Status code is 200 OK": true,
+					"Your test name": true
+				}
+			]
+		},
+		{
+			"id": "be682dd3-484e-4b92-a648-1a81d61f3bdb",
+			"name": "Place a book order",
+			"url": "https://simple-books-api.glitch.me/orders",
+			"time": 296,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Response has the required fields": true,
+				"Created status is true": true,
+				"orderId is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Created status is true": {
+					"pass": 2,
+					"fail": 0
+				},
+				"orderId is a non-empty string": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				293,
+				296
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Response has the required fields": true,
+					"Created status is true": true,
+					"orderId is a non-empty string": true
+				},
+				{
+					"Status code is 201": true,
+					"Response has the required fields": true,
+					"Created status is true": true,
+					"orderId is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "50fd0a9c-6bbc-4e33-819d-e784b4e80373",
+			"name": "task4 - place order for the Russian book",
+			"url": "https://simple-books-api.glitch.me/orders",
+			"time": 369,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Response has the required fields": true,
+				"Created status is true": true,
+				"orderId is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Created status is true": {
+					"pass": 2,
+					"fail": 0
+				},
+				"orderId is a non-empty string": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				434,
+				369
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Response has the required fields": true,
+					"Created status is true": true,
+					"orderId is a non-empty string": true
+				},
+				{
+					"Status code is 201": true,
+					"Response has the required fields": true,
+					"Created status is true": true,
+					"orderId is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "16fbf623-39e1-41e3-ab7e-0f648434a60e",
+			"name": "Update an order",
+			"url": "https://simple-books-api.glitch.me/orders/XCw7Bsj9lB0W1unIpJMpc",
+			"time": 521,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204 - No content": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204 - No content": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				412,
+				521
+			],
+			"allTests": [
+				{
+					"Status code is 204 - No content": true
+				},
+				{
+					"Status code is 204 - No content": true
+				}
+			]
+		},
+		{
+			"id": "50a4e4ce-d9ca-4b98-8f18-4983e35433e4",
+			"name": "Get all orders",
+			"url": "https://simple-books-api.glitch.me/orders",
+			"time": 256,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				298,
+				256
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "5ef5acbc-c00e-42cd-ba0f-2662e0504677",
+			"name": "Delete an order",
+			"url": "https://simple-books-api.glitch.me/orders/XCw7Bsj9lB0W1unIpJMpc",
+			"time": 309,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204 - No content": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204 - No content": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				735,
+				309
+			],
+			"allTests": [
+				{
+					"Status code is 204 - No content": true
+				},
+				{
+					"Status code is 204 - No content": true
+				}
+			]
+		}
+	],
+	"count": 2,
+	"totalTime": 8779,
+	"collection": {
+		"requests": [
+			{
+				"id": "70a460f1-e943-46e2-9ef5-5d12cbfaf343",
+				"method": "GET"
+			},
+			{
+				"id": "1fcdd12d-2879-4469-be53-3a5429a997f8",
+				"method": "POST"
+			},
+			{
+				"id": "b90d69be-c5ed-4c85-bf9a-3c2e0c64661b",
+				"method": "GET"
+			},
+			{
+				"id": "d444466d-30b1-4d9e-b5c6-236c79c2a769",
+				"method": "GET"
+			},
+			{
+				"id": "f76c2596-92d5-417a-87c2-cb31dddd0dea",
+				"method": "GET"
+			},
+			{
+				"id": "357b011d-1ec1-4e11-b991-c16d9d3c7b4c",
+				"method": "GET"
+			},
+			{
+				"id": "be682dd3-484e-4b92-a648-1a81d61f3bdb",
+				"method": "POST"
+			},
+			{
+				"id": "50fd0a9c-6bbc-4e33-819d-e784b4e80373",
+				"method": "POST"
+			},
+			{
+				"id": "16fbf623-39e1-41e3-ab7e-0f648434a60e",
+				"method": "PATCH"
+			},
+			{
+				"id": "50a4e4ce-d9ca-4b98-8f18-4983e35433e4",
+				"method": "GET"
+			},
+			{
+				"id": "5ef5acbc-c00e-42cd-ba0f-2662e0504677",
+				"method": "DELETE"
+			}
+		]
+	}
+}
