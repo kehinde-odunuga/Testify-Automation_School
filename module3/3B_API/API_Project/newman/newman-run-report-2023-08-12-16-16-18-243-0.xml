@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Sendinblue" tests="76" time="42.295">
+  <testsuite name="Sales CRM / Companies / Create a company" id="918c7a50-6df3-40d9-9c64-1c2439102223" timestamp="2023-08-12T16:15:27.146Z" tests="8" failures="0" errors="0" time="0.923">
+    <testcase name="Verify response headers" time="0.923" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.923" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.923" classname="Sendinblue"/>
+    <testcase name="Response has the Id field" time="0.923" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.923" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.923" classname="Sendinblue"/>
+    <testcase name="The id is a non-empty string" time="0.923" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Sales CRM / Companies / Get all Companies" id="8106d18a-ff5c-48b6-83d8-a65a3102e987" timestamp="2023-08-12T16:15:27.146Z" tests="7" failures="0" errors="0" time="0.485">
+    <testcase name="Verify response headers" time="0.485" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.485" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.485" classname="Sendinblue"/>
+    <testcase name="Response body is an array" time="0.485" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.485" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="0.485" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Sales CRM / Companies / Get company attributes" id="71dd00fa-d9c0-4912-8c3a-b814ead55e44" timestamp="2023-08-12T16:15:27.146Z" tests="8" failures="0" errors="0" time="0.887">
+    <testcase name="Verify response headers" time="0.887" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.887" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.887" classname="Sendinblue"/>
+    <testcase name="Response body is an array" time="0.887" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.887" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="0.887" classname="Sendinblue"/>
+    <testcase name="Required field is a boolean value" time="0.887" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Sales CRM / Companies / Get a company" id="d0c45e75-b9dc-4928-ab68-b9d9a410b6b7" timestamp="2023-08-12T16:15:27.146Z" tests="9" failures="0" errors="0" time="0.490">
+    <testcase name="Verify response headers" time="0.490" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.490" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.490" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.490" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.490" classname="Sendinblue"/>
+    <testcase name="Response body attributes has the required fields" time="0.490" classname="Sendinblue"/>
+    <testcase name="Id is a non-empty string" time="0.490" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Sales CRM / Companies / Delete a company" id="f14d1d5d-8dad-480c-8253-fa279114489f" timestamp="2023-08-12T16:15:27.146Z" tests="5" failures="0" errors="0" time="0.388">
+    <testcase name="Verify response headers" time="0.388" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.388" classname="Sendinblue"/>
+    <testcase name="Response status code is 204 No Content" time="0.388" classname="Sendinblue"/>
+    <testcase name="Response is empty" time="0.388" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Sales CRM / Companies / Get pipeline stages" id="7957cf96-968a-43a9-ba52-b9a5f8762572" timestamp="2023-08-12T16:15:27.146Z" tests="9" failures="0" errors="0" time="0.612">
+    <testcase name="Verify response headers" time="0.612" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.612" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.612" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.612" classname="Sendinblue"/>
+    <testcase name="Response has the required fields" time="0.612" classname="Sendinblue"/>
+    <testcase name="Pipeline is a non-empty string" time="0.612" classname="Sendinblue"/>
+    <testcase name="Pipeline name is a non-empty string" time="0.612" classname="Sendinblue"/>
+    <testcase name="Stages is an array with at least one element" time="0.612" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Sales CRM / Deals / Create a deal" id="dd3742a1-8d72-4074-a8b9-270d22130bfe" timestamp="2023-08-12T16:15:27.146Z" tests="7" failures="0" errors="0" time="0.722">
+    <testcase name="Verify response headers" time="0.722" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.722" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.722" classname="Sendinblue"/>
+    <testcase name="Response has the Id field" time="0.722" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.722" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.722" classname="Sendinblue"/>
+    <testcase name="The id is a non-empty string" time="0.722" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Sales CRM / Deals / Get all deals" id="cc0c8084-e9c2-4552-ba0d-ec49e48b66fc" timestamp="2023-08-12T16:15:27.146Z" tests="6" failures="0" errors="0" time="0.461">
+    <testcase name="Verify response headers" time="0.461" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.461" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.461" classname="Sendinblue"/>
+    <testcase name="Response body is an array" time="0.461" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.461" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="0.461" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Sales CRM / Deals / Get deal attributes" id="0e3628b6-8798-4145-a282-756cfb600035" timestamp="2023-08-12T16:15:27.146Z" tests="7" failures="0" errors="0" time="1.299">
+    <testcase name="Verify response headers" time="1.299" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="1.299" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="1.299" classname="Sendinblue"/>
+    <testcase name="Response body is an array" time="1.299" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="1.299" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="1.299" classname="Sendinblue"/>
+    <testcase name="isRequired field is a boolean value" time="1.299" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Sales CRM / Deals / Get a deal" id="1f58b756-10fe-4c73-adf9-2d7bef901436" timestamp="2023-08-12T16:15:27.146Z" tests="8" failures="0" errors="0" time="0.377">
+    <testcase name="Verify response headers" time="0.377" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.377" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.377" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.377" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.377" classname="Sendinblue"/>
+    <testcase name="Response body attributes has the required fields" time="0.377" classname="Sendinblue"/>
+    <testcase name="Id is a non-empty string" time="0.377" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Sales CRM / Deals / Delete a deal" id="5e033e54-f1bb-44cd-b2c6-82ec0f52b78b" timestamp="2023-08-12T16:15:27.146Z" tests="4" failures="0" errors="0" time="0.332">
+    <testcase name="Verify response headers" time="0.332" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.332" classname="Sendinblue"/>
+    <testcase name="Response status code is 204 No Content" time="0.332" classname="Sendinblue"/>
+    <testcase name="Response is empty" time="0.332" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Sales CRM / Notes / Create a note" id="6ca5de5f-ec12-4cc7-82ae-e093f1f0c9e0" timestamp="2023-08-12T16:15:27.146Z" tests="8" failures="0" errors="0" time="0.471">
+    <testcase name="Verify response headers" time="0.471" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.471" classname="Sendinblue"/>
+    <testcase name="Response status code is 201 Created" time="0.471" classname="Sendinblue"/>
+    <testcase name="Response has the Id field" time="0.471" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.471" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.471" classname="Sendinblue"/>
+    <testcase name="The id is a non-empty string" time="0.471" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="0.471" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Sales CRM / Notes / Get all notes" id="27ed745f-f836-4362-8a93-8193fc075369" timestamp="2023-08-12T16:15:27.146Z" tests="6" failures="0" errors="0" time="0.444">
+    <testcase name="Verify response headers" time="0.444" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.444" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.444" classname="Sendinblue"/>
+    <testcase name="Response body is an array" time="0.444" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.444" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="0.444" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Sales CRM / Notes / Get a note" id="4807f402-fd86-42ac-98e2-5a9893192aaf" timestamp="2023-08-12T16:15:27.146Z" tests="8" failures="0" errors="0" time="0.430">
+    <testcase name="Verify response headers" time="0.430" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.430" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.430" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.430" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.430" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="0.430" classname="Sendinblue"/>
+    <testcase name="Id is a non-empty string" time="0.430" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Sales CRM / Notes / Update a note" id="06fb9dd0-baea-4900-90b9-84ae0f33652b" timestamp="2023-08-12T16:15:27.146Z" tests="8" failures="0" errors="0" time="0.428">
+    <testcase name="Verify response headers" time="0.428" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.428" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.428" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.428" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.428" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="0.428" classname="Sendinblue"/>
+    <testcase name="Id is a non-empty string" time="0.428" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Sales CRM / Notes / Delete a note" id="80ff82c0-ce33-4880-be15-7cf3287c9b4c" timestamp="2023-08-12T16:15:27.146Z" tests="4" failures="0" errors="0" time="0.559">
+    <testcase name="Verify response headers" time="0.559" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.559" classname="Sendinblue"/>
+    <testcase name="Response status code is 204 No Content" time="0.559" classname="Sendinblue"/>
+    <testcase name="Response is empty" time="0.559" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Sales CRM / Files / Get all files" id="93142803-1140-4423-a9e0-ab9774f02cd2" timestamp="2023-08-12T16:15:27.146Z" tests="6" failures="0" errors="0" time="0.394">
+    <testcase name="Verify response headers" time="0.394" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.394" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.394" classname="Sendinblue"/>
+    <testcase name="Response body is an array" time="0.394" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.394" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="0.394" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Sales CRM / Files / Get file details" id="ba16e8a8-d05d-45bb-bbcd-af2b8367779c" timestamp="2023-08-12T16:15:27.146Z" tests="7" failures="0" errors="0" time="1.251">
+    <testcase name="Verify response headers" time="1.251" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="1.251" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="1.251" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="1.251" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="1.251" classname="Sendinblue"/>
+    <testcase name="Response body attributes has the required fields" time="1.251" classname="Sendinblue"/>
+    <testcase name="Id is a non-empty string" time="1.251" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Marketing / Email Campaigns / Get an email campaign report" id="8fc7d12e-ce87-4cc3-bc8a-d5ec82b4eebd" timestamp="2023-08-12T16:15:27.146Z" tests="7" failures="0" errors="0" time="0.396">
+    <testcase name="Verify response headers" time="0.396" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.396" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.396" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.396" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.396" classname="Sendinblue"/>
+    <testcase name="Response body attributes has required fields" time="0.396" classname="Sendinblue"/>
+    <testcase name="Id is a non-empty number field" time="0.396" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Marketing / Email Campaigns / Get a shared template url" id="3475ecd4-d017-4712-bcd2-e59f09fbd100" timestamp="2023-08-12T16:15:27.146Z" tests="7" failures="0" errors="0" time="0.284">
+    <testcase name="Verify response headers" time="0.284" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.284" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.284" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.284" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.284" classname="Sendinblue"/>
+    <testcase name="Response body attributes has required fields" time="0.284" classname="Sendinblue"/>
+    <testcase name="sharedUrl is a valid URL format" time="0.284" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Marketing / Email Campaigns / Return all your created email campaigns" id="264480ac-e57a-47d3-9000-d781eb03d261" timestamp="2023-08-12T16:15:27.146Z" tests="6" failures="0" errors="0" time="0.451">
+    <testcase name="Verify response headers" time="0.451" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.451" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.451" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.451" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.451" classname="Sendinblue"/>
+    <testcase name="Response body attributes has required fields" time="0.451" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Marketing / SMS Campaigns / Returns the information for all your created SMS campaigns" id="59044de7-e675-42e8-abf6-d87093ee2cb1" timestamp="2023-08-12T16:15:27.146Z" tests="6" failures="0" errors="0" time="0.531">
+    <testcase name="Verify response headers" time="0.531" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.531" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.531" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.531" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.531" classname="Sendinblue"/>
+    <testcase name="Response body attributes has required fields" time="0.531" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Marketing / SMS Campaigns / Get an SMS campaign" id="935746f6-c592-45a6-b735-43869a93701b" timestamp="2023-08-12T16:15:27.146Z" tests="7" failures="0" errors="0" time="0.340">
+    <testcase name="Verify response headers" time="0.340" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.340" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.340" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.340" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.340" classname="Sendinblue"/>
+    <testcase name="Response body attributes has required fields" time="0.340" classname="Sendinblue"/>
+    <testcase name="Id is a non-empty number field" time="0.340" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Conversations / Messages / Send a message as an agent" id="f710ef20-04b5-4dcb-82fa-ab33dd8afa93" timestamp="2023-08-12T16:15:27.146Z" tests="9" failures="0" errors="0" time="0.625">
+    <testcase name="Verify response headers" time="0.625" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.625" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.625" classname="Sendinblue"/>
+    <testcase name="Response has the Id field" time="0.625" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.625" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.625" classname="Sendinblue"/>
+    <testcase name="The id is a non-empty string" time="0.625" classname="Sendinblue"/>
+    <testcase name="Response body is in JSON format" time="0.625" classname="Sendinblue"/>
+    <testcase name="Validate response body properties" time="0.625" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Conversations / Messages / Get a message" id="61f1c972-3c52-4d61-a906-8e834dc8bafc" timestamp="2023-08-12T16:15:27.146Z" tests="9" failures="0" errors="0" time="0.652">
+    <testcase name="Verify response headers" time="0.652" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.652" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.652" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.652" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.652" classname="Sendinblue"/>
+    <testcase name="Id is a non-empty string" time="0.652" classname="Sendinblue"/>
+    <testcase name="Response body is in JSON format" time="0.652" classname="Sendinblue"/>
+    <testcase name="Validate response body properties" time="0.652" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Conversations / Messages / Update a message sent by an agent" id="dbe533e5-e17b-4aae-874f-98b10e431c35" timestamp="2023-08-12T16:15:27.146Z" tests="7" failures="0" errors="0" time="0.637">
+    <testcase name="Verify response headers" time="0.637" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.637" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.637" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.637" classname="Sendinblue"/>
+    <testcase name="Response body is in JSON format" time="0.637" classname="Sendinblue"/>
+    <testcase name="Validate response body properties" time="0.637" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Conversations / Messages / Delete a message sent by an agent" id="710c3207-3fdb-486a-b293-284c330fbfc8" timestamp="2023-08-12T16:15:27.146Z" tests="4" failures="0" errors="0" time="0.633">
+    <testcase name="Verify response headers" time="0.633" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.633" classname="Sendinblue"/>
+    <testcase name="Response status code is 204 No Content" time="0.633" classname="Sendinblue"/>
+    <testcase name="Response is empty" time="0.633" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Conversations / Status / Sets agent’s status to online for 2-3 minutes" id="19a55220-8f52-497c-a5b1-3ad5152da5f5" timestamp="2023-08-12T16:15:27.146Z" tests="4" failures="0" errors="0" time="0.362">
+    <testcase name="Verify response headers" time="0.362" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.362" classname="Sendinblue"/>
+    <testcase name="Response status code is 201 Created" time="0.362" classname="Sendinblue"/>
+    <testcase name="Response is empty" time="0.362" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Conversations / Pushed messages / Send an automated message to a visitor" id="2d35a704-80bf-4ad7-9aaa-f85489928cd4" timestamp="2023-08-12T16:15:27.146Z" tests="9" failures="0" errors="0" time="0.352">
+    <testcase name="Verify response headers" time="0.352" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.352" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.352" classname="Sendinblue"/>
+    <testcase name="Response has the Id field" time="0.352" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.352" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.352" classname="Sendinblue"/>
+    <testcase name="The id is a non-empty string" time="0.352" classname="Sendinblue"/>
+    <testcase name="Response body is in JSON format" time="0.352" classname="Sendinblue"/>
+    <testcase name="Validate response body properties" time="0.352" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Conversations / Pushed messages / Get an automated message" id="c306338c-b392-4a09-add0-b5cb5399889f" timestamp="2023-08-12T16:15:27.146Z" tests="9" failures="0" errors="0" time="0.559">
+    <testcase name="Verify response headers" time="0.559" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.559" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.559" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.559" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.559" classname="Sendinblue"/>
+    <testcase name="Id is a non-empty string" time="0.559" classname="Sendinblue"/>
+    <testcase name="Response body is in JSON format" time="0.559" classname="Sendinblue"/>
+    <testcase name="Validate response body properties" time="0.559" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Conversations / Pushed messages / Update an automated message" id="5be55b17-701d-45f3-9fa9-7d406c8f2d65" timestamp="2023-08-12T16:15:27.146Z" tests="7" failures="0" errors="0" time="0.796">
+    <testcase name="Verify response headers" time="0.796" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.796" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.796" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.796" classname="Sendinblue"/>
+    <testcase name="Response body is in JSON format" time="0.796" classname="Sendinblue"/>
+    <testcase name="Validate response body properties" time="0.796" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Conversations / Pushed messages / Delete an automated message" id="720ce8b0-6a28-4910-ba1d-b759947583d4" timestamp="2023-08-12T16:15:27.146Z" tests="4" failures="0" errors="0" time="0.651">
+    <testcase name="Verify response headers" time="0.651" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.651" classname="Sendinblue"/>
+    <testcase name="Response status code is 204 No Content" time="0.651" classname="Sendinblue"/>
+    <testcase name="Response is empty" time="0.651" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Contact management / Folders / Create a folder" id="4ff9f99a-d1e7-4113-b070-797966b7a673" timestamp="2023-08-12T16:15:27.146Z" tests="7" failures="0" errors="0" time="0.471">
+    <testcase name="Verify response headers" time="0.471" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.471" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 Created" time="0.471" classname="Sendinblue"/>
+    <testcase name="Response has the Id field" time="0.471" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.471" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.471" classname="Sendinblue"/>
+    <testcase name="The id is a non-empty number field" time="0.471" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Contact management / Folders / Get all folders" id="b877b692-e64a-4c24-a419-c36c2df0f144" timestamp="2023-08-12T16:15:27.146Z" tests="6" failures="0" errors="0" time="0.426">
+    <testcase name="Verify response headers" time="0.426" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.426" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.426" classname="Sendinblue"/>
+    <testcase name="Response body is an array" time="0.426" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.426" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="0.426" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Contact management / Folders / Returns a folder's details" id="251a6a0e-5647-43ef-ae5b-5f1bd42bd636" timestamp="2023-08-12T16:15:27.146Z" tests="7" failures="0" errors="0" time="0.575">
+    <testcase name="Verify response headers" time="0.575" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.575" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.575" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.575" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.575" classname="Sendinblue"/>
+    <testcase name="Response body attributes has the required fields" time="0.575" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Contact management / Folders / Update a folder" id="0a9e7548-f9c9-4714-8a4b-6ae13f9a4297" timestamp="2023-08-12T16:15:27.146Z" tests="4" failures="0" errors="0" time="0.512">
+    <testcase name="Verify response headers" time="0.512" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.512" classname="Sendinblue"/>
+    <testcase name="Response status code is 204 No Content" time="0.512" classname="Sendinblue"/>
+    <testcase name="Response is empty" time="0.512" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Contact management / Folders / Get lists in a folder" id="b53fe71f-6d32-425e-9150-a4c741dc8747" timestamp="2023-08-12T16:15:27.146Z" tests="4" failures="0" errors="0" time="0.349">
+    <testcase name="Verify response headers" time="0.349" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.349" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.349" classname="Sendinblue"/>
+    <testcase name="Response is empty" time="0.349" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Contact management / Folders / Delete a folder (and all its lists)" id="75703005-1104-4a0b-902f-da9c9985aa1f" timestamp="2023-08-12T16:15:27.146Z" tests="4" failures="0" errors="0" time="0.636">
+    <testcase name="Verify response headers" time="0.636" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.636" classname="Sendinblue"/>
+    <testcase name="Response status code is 204 No Content" time="0.636" classname="Sendinblue"/>
+    <testcase name="Response is empty" time="0.636" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Contact management / Lists / Create a list" id="b282a2cf-783f-46bb-95f8-62b61c0b7fa5" timestamp="2023-08-12T16:15:27.146Z" tests="7" failures="0" errors="0" time="0.725">
+    <testcase name="Verify response headers" time="0.725" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.725" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 Created" time="0.725" classname="Sendinblue"/>
+    <testcase name="Response has the Id field" time="0.725" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.725" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.725" classname="Sendinblue"/>
+    <testcase name="The id is a non-empty number field" time="0.725" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Contact management / Lists / Get all the lists" id="ea35334f-a3ce-4dd6-99e2-cff49ae19114" timestamp="2023-08-12T16:15:27.146Z" tests="6" failures="0" errors="0" time="1.009">
+    <testcase name="Verify response headers" time="1.009" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="1.009" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="1.009" classname="Sendinblue"/>
+    <testcase name="Response body is an array" time="1.009" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="1.009" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="1.009" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Contact management / Lists / Get contacts in a list" id="d0adab05-71e1-4681-8231-443ddaa4168b" timestamp="2023-08-12T16:15:27.146Z" tests="4" failures="0" errors="0" time="0.285">
+    <testcase name="Verify response headers" time="0.285" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.285" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.285" classname="Sendinblue"/>
+    <testcase name="Response is empty" time="0.285" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Contact management / Lists / Get a list's details" id="ee593c4e-a72f-4ccb-a1dc-903c2770bfe4" timestamp="2023-08-12T16:15:27.146Z" tests="7" failures="0" errors="0" time="0.282">
+    <testcase name="Verify response headers" time="0.282" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.282" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.282" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.282" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.282" classname="Sendinblue"/>
+    <testcase name="Response body attributes has the required fields" time="0.282" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Contact management / Lists / Delete a list" id="14597eae-6143-489f-8fee-2d75c658b053" timestamp="2023-08-12T16:15:27.146Z" tests="4" failures="0" errors="0" time="0.526">
+    <testcase name="Verify response headers" time="0.526" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.526" classname="Sendinblue"/>
+    <testcase name="Response status code is 204 No Content" time="0.526" classname="Sendinblue"/>
+    <testcase name="Response is empty" time="0.526" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Contact management / Contacts / Create a contact" id="06370439-02a6-4783-92a2-92f049c46e3b" timestamp="2023-08-12T16:15:27.146Z" tests="7" failures="0" errors="0" time="0.354">
+    <testcase name="Verify response headers" time="0.354" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.354" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 Created" time="0.354" classname="Sendinblue"/>
+    <testcase name="Response has the Id field" time="0.354" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.354" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.354" classname="Sendinblue"/>
+    <testcase name="The id is a non-empty number field" time="0.354" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Contact management / Contacts / Get all the contacts" id="8239ef18-dca6-400a-a5f0-c22b755d8a46" timestamp="2023-08-12T16:15:27.146Z" tests="6" failures="0" errors="0" time="0.339">
+    <testcase name="Verify response headers" time="0.339" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.339" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.339" classname="Sendinblue"/>
+    <testcase name="Response body is an array" time="0.339" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.339" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="0.339" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Contact management / Contacts / Get a contact's details" id="a37a9a77-bf3d-46b1-a68f-92512891ee87" timestamp="2023-08-12T16:15:27.146Z" tests="7" failures="0" errors="0" time="0.402">
+    <testcase name="Verify response headers" time="0.402" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.402" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.402" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.402" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.402" classname="Sendinblue"/>
+    <testcase name="Response body attributes has the required fields" time="0.402" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Contact management / Contacts / Delete a contact" id="54829889-acf4-499d-b247-da82f8e41b1c" timestamp="2023-08-12T16:15:27.146Z" tests="4" failures="0" errors="0" time="0.433">
+    <testcase name="Verify response headers" time="0.433" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.433" classname="Sendinblue"/>
+    <testcase name="Response status code is 204 No Content" time="0.433" classname="Sendinblue"/>
+    <testcase name="Response is empty" time="0.433" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Contact management / Contacts / Get email campaigns' statistics for a contact" id="5afcc23c-9eaf-4e21-a5b7-42c3a164fc19" timestamp="2023-08-12T16:15:27.146Z" tests="4" failures="0" errors="0" time="1.268">
+    <testcase name="Verify response headers" time="1.268" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="1.268" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="1.268" classname="Sendinblue"/>
+    <testcase name="Response is empty" time="1.268" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Contact management / Attributes / List all attributes" id="da35c4a1-bd04-4b2d-ab49-65637133be97" timestamp="2023-08-12T16:15:27.146Z" tests="5" failures="0" errors="0" time="0.764">
+    <testcase name="Verify response headers" time="0.764" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.764" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.764" classname="Sendinblue"/>
+    <testcase name="Response body is an array" time="0.764" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.764" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Transactional / Email API / Send a transactional email" id="c26c8e4b-a17a-4b34-b73b-18ea4846593c" timestamp="2023-08-12T16:15:27.146Z" tests="6" failures="0" errors="0" time="0.360">
+    <testcase name="Verify response headers" time="0.360" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.360" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 Created" time="0.360" classname="Sendinblue"/>
+    <testcase name="Response has the Id field" time="0.360" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.360" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.360" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Transactional / Email API / Get the list of transactional emails on the basis of allowed filters" id="df735e82-f0b5-44df-aa0c-10762f768954" timestamp="2023-08-12T16:15:27.146Z" tests="4" failures="0" errors="0" time="0.833">
+    <testcase name="Verify response headers" time="0.833" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.833" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.833" classname="Sendinblue"/>
+    <testcase name="Response body is an array" time="0.833" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Transactional / Email API / Get the personalized content of a sent transactional email" id="80a0e192-8a7b-4396-ac3b-a43d028d1783" timestamp="2023-08-12T16:15:27.146Z" tests="6" failures="0" errors="0" time="0.783">
+    <testcase name="Verify response headers" time="0.783" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.783" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.783" classname="Sendinblue"/>
+    <testcase name="Response body is an array" time="0.783" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.783" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="0.783" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Transactional / Templates / Get the list of email templates" id="09f87780-32fb-4019-94a0-5bbb09fc165f" timestamp="2023-08-12T16:15:27.146Z" tests="6" failures="0" errors="0" time="0.298">
+    <testcase name="Verify response headers" time="0.298" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.298" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.298" classname="Sendinblue"/>
+    <testcase name="Response body is an array" time="0.298" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.298" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="0.298" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Transactional / Templates / Returns the template information" id="e61fd665-c44e-46a3-8d33-c4b8ff37e983" timestamp="2023-08-12T16:15:27.146Z" tests="6" failures="0" errors="0" time="0.629">
+    <testcase name="Verify response headers" time="0.629" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.629" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.629" classname="Sendinblue"/>
+    <testcase name="Response body is an array" time="0.629" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.629" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="0.629" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Transactional / Statistics / Get your transactional email activity aggregated over a period of time" id="bf801113-c9e3-4e05-b503-9200134cb093" timestamp="2023-08-12T16:15:27.146Z" tests="6" failures="0" errors="0" time="0.328">
+    <testcase name="Verify response headers" time="0.328" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.328" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.328" classname="Sendinblue"/>
+    <testcase name="Response body is an array" time="0.328" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.328" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="0.328" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Transactional / Statistics / Get your transactional email activity aggregated per day" id="69426bcc-db42-4078-bfaf-a7335010697c" timestamp="2023-08-12T16:15:27.146Z" tests="6" failures="0" errors="0" time="0.311">
+    <testcase name="Verify response headers" time="0.311" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.311" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.311" classname="Sendinblue"/>
+    <testcase name="Response body is an array" time="0.311" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.311" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="0.311" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Transactional / Statistics / Get all your transactional email activity (unaggregated events)" id="1c709573-b55e-45ff-81fe-0aab5ab31c1b" timestamp="2023-08-12T16:15:27.146Z" tests="6" failures="0" errors="0" time="0.393">
+    <testcase name="Verify response headers" time="0.393" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.393" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.393" classname="Sendinblue"/>
+    <testcase name="Response body is an array" time="0.393" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.393" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="0.393" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Transactional / Blocked Contacts / Get the list of blocked or unsubscribed transactional contacts" id="4f0dc087-5922-4396-b006-d9753a9f0185" timestamp="2023-08-12T16:15:27.146Z" tests="6" failures="0" errors="0" time="0.419">
+    <testcase name="Verify response headers" time="0.419" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.419" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.419" classname="Sendinblue"/>
+    <testcase name="Response body is an array" time="0.419" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.419" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="0.419" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Transactional / Blocked Domains / Get the list of blocked domains" id="7b7dacfb-919f-4fb0-9bf6-db1c087c130f" timestamp="2023-08-12T16:15:27.146Z" tests="6" failures="0" errors="0" time="0.288">
+    <testcase name="Verify response headers" time="0.288" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.288" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.288" classname="Sendinblue"/>
+    <testcase name="Response body is an array" time="0.288" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.288" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="0.288" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Transactional / Blocked Domains / Add a new domain to the list of blocked domains" id="29a265c1-79bf-4d29-b0b7-2a12e7b406fd" timestamp="2023-08-12T16:15:27.146Z" tests="5" failures="0" errors="0" time="0.258">
+    <testcase name="Verify response headers" time="0.258" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.258" classname="Sendinblue"/>
+    <testcase name="Response status code is 201 Created" time="0.258" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.258" classname="Sendinblue"/>
+    <testcase name="Response is empty" time="0.258" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Transactional / Blocked Domains / Unblock an existing domain from the list of blocked domains" id="2ec991b8-04e5-41ca-a0f9-df1560f9dc7e" timestamp="2023-08-12T16:15:27.146Z" tests="4" failures="0" errors="0" time="0.328">
+    <testcase name="Verify response headers" time="0.328" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.328" classname="Sendinblue"/>
+    <testcase name="Response status code is 204 No Content" time="0.328" classname="Sendinblue"/>
+    <testcase name="Response is empty" time="0.328" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Transactional / Logs / Delete hardbounces" id="4265673f-e84d-4dde-b97a-0ed91ae95af6" timestamp="2023-08-12T16:15:27.146Z" tests="4" failures="0" errors="0" time="0.694">
+    <testcase name="Verify response headers" time="0.694" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.694" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.694" classname="Sendinblue"/>
+    <testcase name="Response is empty" time="0.694" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Transactional / Inbound Email Parsing / Get the list of all the events for the received emails." id="b277752f-e687-44bf-b2e5-80ebedfb5cdb" timestamp="2023-08-12T16:15:27.146Z" tests="6" failures="0" errors="0" time="0.555">
+    <testcase name="Verify response headers" time="0.555" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.555" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.555" classname="Sendinblue"/>
+    <testcase name="Response body is an array" time="0.555" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.555" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="0.555" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Transactional / SMS statistics / Get your SMS activity aggregated over a period of time" id="e0347931-21a9-4867-bd5e-678f67ecdfc3" timestamp="2023-08-12T16:15:27.146Z" tests="5" failures="0" errors="0" time="1.527">
+    <testcase name="Verify response headers" time="1.527" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="1.527" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="1.527" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="1.527" classname="Sendinblue"/>
+    <testcase name="Response body is empty" time="1.527" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Transactional / SMS statistics / Get your SMS activity aggregated per day" id="9ce4873a-b0a5-4c87-a140-8555ae005d21" timestamp="2023-08-12T16:15:27.146Z" tests="5" failures="0" errors="0" time="0.276">
+    <testcase name="Verify response headers" time="0.276" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.276" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.276" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.276" classname="Sendinblue"/>
+    <testcase name="Response body is empty" time="0.276" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Transactional / SMS statistics / Get all your SMS activity (unaggregated events)" id="fb8d7372-8716-4d09-97ed-e84a2bedd5fc" timestamp="2023-08-12T16:15:27.146Z" tests="5" failures="0" errors="0" time="0.500">
+    <testcase name="Verify response headers" time="0.500" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.500" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.500" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.500" classname="Sendinblue"/>
+    <testcase name="Response body is empty" time="0.500" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Account / Process / Return all the processes for your account" id="bc589251-ec93-4ffb-9e7c-63932fd89b58" timestamp="2023-08-12T16:15:27.146Z" tests="6" failures="0" errors="0" time="1.604">
+    <testcase name="Verify response headers" time="1.604" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="1.604" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="1.604" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="1.604" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="1.604" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="1.604" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Account / Process / Return the informations for a process" id="cef5f16d-8912-4650-a90f-06d1b4b58a3a" timestamp="2023-08-12T16:15:27.146Z" tests="6" failures="0" errors="0" time="0.329">
+    <testcase name="Verify response headers" time="0.329" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.329" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.329" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.329" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.329" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="0.329" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Account / Account data / Get your account information, plan and credits details" id="7136e42c-575a-4cd8-af98-284f8d6a83dd" timestamp="2023-08-12T16:15:27.146Z" tests="6" failures="0" errors="0" time="0.538">
+    <testcase name="Verify response headers" time="0.538" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.538" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.538" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.538" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.538" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="0.538" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Account / Senders / Create a new sender" id="e6e095f6-77a9-49ea-bfb8-c875a4bb945c" timestamp="2023-08-12T16:15:27.146Z" tests="7" failures="0" errors="0" time="0.856">
+    <testcase name="Verify response headers" time="0.856" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.856" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 Created" time="0.856" classname="Sendinblue"/>
+    <testcase name="Response has the Id field" time="0.856" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.856" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.856" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="0.856" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Account / Senders / Get the list of all your senders" id="852fbffe-b578-4829-85e2-2150b842552a" timestamp="2023-08-12T16:15:27.146Z" tests="6" failures="0" errors="0" time="0.453">
+    <testcase name="Verify response headers" time="0.453" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.453" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.453" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.453" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.453" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="0.453" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Account / Senders / Get all the dedicated IPs for your account" id="dcb3860e-e90d-4b6d-8459-9c37164f399f" timestamp="2023-08-12T16:15:27.146Z" tests="6" failures="0" errors="0" time="0.302">
+    <testcase name="Verify response headers" time="0.302" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.302" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.302" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.302" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.302" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="0.302" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Account / Senders / Get all the dedicated IPs for a sender" id="0476be37-8af2-4a78-a9a2-5996726e236a" timestamp="2023-08-12T16:15:27.146Z" tests="6" failures="0" errors="0" time="0.392">
+    <testcase name="Verify response headers" time="0.392" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.392" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.392" classname="Sendinblue"/>
+    <testcase name="Response body is an object" time="0.392" classname="Sendinblue"/>
+    <testcase name="Response body is not empty" time="0.392" classname="Sendinblue"/>
+    <testcase name="Response body has the required fields" time="0.392" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Account / Senders / Update a sender" id="8f66b78d-3aaf-4e2d-82c0-f6c50415dda5" timestamp="2023-08-12T16:15:27.146Z" tests="4" failures="0" errors="0" time="0.590">
+    <testcase name="Verify response headers" time="0.590" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.590" classname="Sendinblue"/>
+    <testcase name="Response status code is 204 No Content" time="0.590" classname="Sendinblue"/>
+    <testcase name="Response is empty" time="0.590" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Account / Senders / Delete a sender" id="9cbd79be-4f5d-4529-a962-b755e723948d" timestamp="2023-08-12T16:15:27.146Z" tests="4" failures="0" errors="0" time="0.350">
+    <testcase name="Verify response headers" time="0.350" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.350" classname="Sendinblue"/>
+    <testcase name="Response status code is 204 No Content" time="0.350" classname="Sendinblue"/>
+    <testcase name="Response is empty" time="0.350" classname="Sendinblue"/>
+  </testsuite>
+  <testsuite name="Test Clean-up" id="10603836-fe6c-44e7-b622-283aabfcf251" timestamp="2023-08-12T16:15:27.146Z" tests="3" failures="0" errors="0" time="0.523">
+    <testcase name="Verify response headers" time="0.523" classname="Sendinblue"/>
+    <testcase name="Validate response speed" time="0.523" classname="Sendinblue"/>
+    <testcase name="Response status code is 200 OK" time="0.523" classname="Sendinblue"/>
+  </testsuite>
+</testsuites>

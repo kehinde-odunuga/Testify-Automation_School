@@ -1,0 +1,1 @@
+{"email":"mauricio+unsubtest@sendinblue.com","subject":"","date":"2023-08-12T10:19:38.789+02:00","events":[{"name":"sent","time":"2023-08-12T10:19:38.789+02:00"},{"name":"error","time":"2023-08-12T10:19:38.789+02:00"}],"body":"Mail content not available","attachmentCount":0,"templateId":69}

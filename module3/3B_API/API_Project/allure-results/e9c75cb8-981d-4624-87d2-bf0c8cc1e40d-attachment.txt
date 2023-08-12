@@ -1,0 +1,1 @@
+{"contacts":[{"email":"helen9766@example.com","reason":{"message":"This contact's email address generated a hard bounce","code":"hardBounce"},"blockedAt":"2023-05-16T22:06:05.000Z"},{"email":"jimmy98@example.com","reason":{"message":"This contact's email address generated a hard bounce","code":"hardBounce"},"blockedAt":"2023-05-10T20:12:52.000Z"}],"count":2}

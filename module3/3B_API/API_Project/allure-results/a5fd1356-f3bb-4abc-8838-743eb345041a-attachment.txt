@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>SendinBlue API V3.0.0</title>
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.sendinblue.com/wp-content/themes/sendinblue2019/assets/favicon/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.sendinblue.com/wp-content/themes/sendinblue2019/assets/favicon/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.sendinblue.com/wp-content/themes/sendinblue2019/assets/favicon/favicon-16x16.png" />
+<meta name="msapplication-TileColor" content="#ffffff" />
+<link rel="mask-icon" href="https://www.sendinblue.com/wp-content/themes/sendinblue2019/assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+<meta name="msapplication-TileImage" content="https://www.sendinblue.com/wp-content/themes/sendinblue2019/assets/favicon/mstile-144x144.png" />
+<meta name="msapplication-config" content="https://www.sendinblue.com/wp-content/themes/sendinblue2019/assets/favicon/browserconfig.xml" />
+</head>
+<body>
+For more information please visit our API documentation at
+<a href="https://sendinblue.readme.io/docs">SendinBlue API docs</a>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854" integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg==" data-cf-beacon='{"rayId":"7f5a0817be9e185c","version":"2023.7.0","b":1,"token":"7765cec285be473faa0475a7035adb54","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>

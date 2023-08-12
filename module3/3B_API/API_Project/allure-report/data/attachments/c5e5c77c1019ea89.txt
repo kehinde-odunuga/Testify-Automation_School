@@ -1,0 +1,8 @@
+{
+    "id": "CoyPwgDR2KhmykyPA",
+    "type": "agent",
+    "text": "Hello! How can I help you?",
+    "visitorId": "kZMvWhf8npAu3H6qd57w2Hv6nh6rnxvg",
+    "agentId": "645ad89f9bb96f5af11e9337_645ad89e9bb96f5af11e9336",
+    "createdAt": 1691857046769
+}

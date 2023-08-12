@@ -1,0 +1,1 @@
+{"id":202,"name":"envisioneer_cotton.zaz","totalBlacklisted":0,"totalSubscribers":0,"uniqueSubscribers":0,"folderId":103,"createdAt":"2023-08-12T17:17:39.000+01:00","dynamicList":false}
