@@ -1,0 +1,17 @@
+package Tasks;
+
+public class Task3 {
+    public static void main(String[] args) {
+        // Print out age in a string using different methods of concatenation
+
+        int age = 25;
+        String adjective = "My age is ";
+
+        String conjuction = adjective + age;
+
+        System.out.println(conjuction);
+
+        adjective.concat(age+" ");
+        System.out.println(adjective.concat(age+" "));
+    }
+}
