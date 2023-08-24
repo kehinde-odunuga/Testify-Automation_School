@@ -10,8 +10,7 @@ public class Task3 {
         String conjuction = adjective + age;
 
         System.out.println(conjuction);
-
-        adjective.concat(age+" ");
+        
         System.out.println(adjective.concat(age+" "));
     }
 }
