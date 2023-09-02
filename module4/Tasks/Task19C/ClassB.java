@@ -10,6 +10,6 @@ public class ClassB extends ClassA{
     }
 
     public void newName(){
-        System.out.println("Class A value is: "+super.name +" \nClass B value is: "+ name);
+        System.out.println("ClassA value is: "+super.name +" \nClassB value is: "+ name);
     }
 }
