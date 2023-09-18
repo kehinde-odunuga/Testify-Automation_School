@@ -31,5 +31,9 @@ public class Task5 {
 
         //View cart
         driver.findElement(By.xpath("//a[@class='shopping_cart_link']")).click();
+        Thread.sleep(2000);
+
+        //Checkout
+        driver.findElement(By.xpath("//button[@id='checkout']")).click();
     }
 }
