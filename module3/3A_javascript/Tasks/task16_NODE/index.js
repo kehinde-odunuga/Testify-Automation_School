@@ -1,1 +1,1 @@
-alert("Hello Node Js")
+console.log("Hello Node Js")
