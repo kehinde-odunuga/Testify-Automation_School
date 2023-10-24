@@ -24,6 +24,8 @@ const day = 'Tuesday'
 //     console.log('Go to work!')
 // }
 
+//Switch statements
+
 switch(day){
     case 'Friday':
         console.log('TGIF')
