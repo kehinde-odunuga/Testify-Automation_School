@@ -22,3 +22,5 @@ console.log(division)
 const modulus = 40%6
 
 console.log(modulus)
+
+// Compari
