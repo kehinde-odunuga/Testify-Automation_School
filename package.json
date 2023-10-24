@@ -1,11 +1,11 @@
 {
-  "name": "node",
+  "name": "testify-automation_school",
   "version": "1.0.0",
-  "description": "\"Module 3\"",
+  "description": "This is a repository for all my Testify Automation School collections",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Kehinde",
+  "author": "",
   "license": "ISC"
 }
