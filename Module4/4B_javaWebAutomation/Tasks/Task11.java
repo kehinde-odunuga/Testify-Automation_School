@@ -3,9 +3,12 @@ package Tasks;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.Set;
+
+import static org.openqa.selenium.By.className;
 
 public class Task11 {
     public static void main(String[] args) throws InterruptedException {
@@ -25,8 +28,10 @@ public class Task11 {
         Thread.sleep(2000);
         driver.findElement(By.xpath("//body[1]/div[1]/div[3]/form[1]/div[1]/div[1]/div[4]/center[1]/input[1]")).click();
         Thread.sleep(2000);
-        driver.findElement(By.xpath("//body/div[@id='main']/div[@id='cnt']/div[@id='rcnt']/div[@id='center_col']/div[@id='res']/div[@id='search']/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]/a[1]/h3[1]")).click();
 
+        //driver.findElement(By.xpath("//*[@id=\"kp-wp-tab-overview\"]/div[1]/div/div/div/div/div/div[1]/div/div/span/a/h3")).click();
+        driver.findElement(By.tagName("h3")).click();
+        Thread.sleep(5000);
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
@@ -39,15 +44,19 @@ public class Task11 {
         for (String window: windows) {
             driver.switchTo().window(window);
             Thread.sleep(3000);
-            //System.out.println(driver.getCurrentUrl());
+            System.out.println(driver.getCurrentUrl());
     }
 
-        driver.findElement(By.xpath("//*[@id=\"organization_guest_contextual-sign-in\"]/div/section/button")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
+
+        WebElement modalClose = driver.findElement(By.xpath("/html/body/div[4]/div/div/section/button/icon"));
+        modalClose.click();
 
         String text = driver.findElement(By.xpath("//*[@id=\"main-content\"]/section[1]/section/div/div[2]/div[1]/h4/span")).getText();
         System.out.println(text);
 
-        driver.close();
+        Thread.sleep(3000);
+
+        driver.quit();
     }
 }
