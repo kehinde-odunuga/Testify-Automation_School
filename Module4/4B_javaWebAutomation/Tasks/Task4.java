@@ -27,31 +27,21 @@ public class Task4 {
         driver.get("http://demo.guru99.com/");
         Thread.sleep(2000);
 
+        //Click on Security project menu
+        WebElement securityProjectMenu = driver.findElement(By.linkText("Security Project"));
+        securityProjectMenu.click();
+
+        driver.navigate().refresh();
+
         driver.findElement(By.linkText("Security Project")).click();
-        Thread.sleep(3000);
-        
-        Set<String> windows = driver.getWindowHandles();
-        for (String window: windows) {
-            driver.switchTo().window(window);
-            Thread.sleep(3000);
-            System.out.println(driver.getCurrentUrl());
+        Thread.sleep(2000);
 
-            WebElement compAccess = driver.findElement(By.xpath("//*[@id=\"ad_position_box\"]"));
-            Actions mouse = new Actions(driver);
-            mouse.moveToElement(compAccess).build().perform();
-            Thread.sleep(1000);
-
-            if (driver.getCurrentUrl().equalsIgnoreCase("https://demo.guru99.com/#google_vignette")) {
-                //apple = driver.getCurrentUrl();
-                driver.findElement(By.xpath("/html/body")).click();
-                Thread.sleep(3000);
-            }
-        }
-        //input a text in the username and password
-        driver.findElement(By.xpath("//tbody/tr[1]/td[2]/input[1]")).sendKeys("testify");
-        driver.findElement(By.xpath("//tbody/tr[2]/td[2]/input[1]")).sendKeys("school");
-
-        Thread.sleep(3000);
+        // Enter email
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.name("uid"))).sendKeys("ok@abc.com");
+        // Enter password
+        driver.findElement(By.name("password")).sendKeys("your_password");
+        Thread.sleep(2000);
 
         driver.quit();
     }
